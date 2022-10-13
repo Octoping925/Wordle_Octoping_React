@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Wordle_Octoping_React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <br>
+  <!-- <img src="./wordle.jpg" width="700"> -->
+  <br>
+</p>
 
-## Available Scripts
 
-In the project directory, you can run:
+## 프로젝트 소개
+리액트 기초를 공부하기 위한 토이 프로젝트입니다.
 
-### `npm start`
+[Wordle_Octoping](https://github.com/Octoping925/Wordle_Octoping)의 구조를 가지고 React를 사용하여 만들었습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[NYTimes Wordle](https://www.nytimes.com/games/wordle/index.html)을 참고하여 만들었습니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## 기술 스택
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| React |
+| :--------: |
+|   ![react]    |
 
-### `npm run build`
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 구현 기능
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 기능 1
+<!-- 단어 입력시 정답에 맞춰 알맞는 색깔로 표에 표시됨
+### 기능 2
+게임 종료시 모달 창을 띄워 게임 결과와 재시작 버튼 표시
+### 기능 3
+입력값이 올바르지 않을 때 토스트 메시지 표시 -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `npm run eject`
+## 배운 점 & 아쉬운 점
+<!-- 전반적인 CSS 사용법을 익히는 데에 도움이 많이 됐습니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+개인적으로 만들어본 첫 웹 프로젝트인만큼, 자신감을 키우는 데에 도움이 많이 됐습니다.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+CSS에 능통하지는 않아, 글자 입력할 때 애니메이션을 넣는 등의 디자인 적인 부분에 소홀할 수 밖에 없던 점이 아쉽습니다. -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- Stack Icon Refernces -->
+[react]: https://github.com/Octoping925/readme-template/blob/main/images/stack/react.svg
