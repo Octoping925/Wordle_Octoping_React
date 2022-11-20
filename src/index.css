@@ -23,8 +23,20 @@ tr, td {
   width: 100px;
   height: 100px;
   text-align: center;
+  font-size: xx-large;
+  font-weight: 700;
 }
 
 input {
   margin: 50px;
+}
+
+.greenGrid {
+  background-color: greenyellow;
+}
+.yellowGrid {
+  background-color: yellow;
+}
+.grayGrid {
+  background-color: gray;
 }

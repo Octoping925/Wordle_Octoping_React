@@ -1,35 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Table from './Table';
+import Input from './Input';
+import { Util } from './Util';
+import { Constants } from './Config';
+import { Session } from './Session';
 
 function App() {
-  let []
+  const [session, sessionChange] = useState(new Session());
 
   const submitAnswer = (word : string) => {
-
-  };
-
-  const handleKeyPress = (e : React.KeyboardEvent<HTMLInputElement>) => {
-    const wordInputElement = document.getElementById("wordInput") as HTMLInputElement;
-    const wordInputValue = wordInputElement.value;
-
-    if(e.key === 'Enter') {
-      submitAnswer(wordInputValue);
-    }
-    else {
-      wordInputElement.value = wordInputValue.replace(/[^A-Za-z]/ig, '')
-                                              .substring(0, 5)
-                                              .toUpperCase();
-    }
-  };
+    session.submitAnswer(word);
+    sessionChange(Util.deepCopy(session));
+  }
 
   return (
     <div className="App">
       <h1>Wordle</h1>
-      <Table/>
-      <input
-       id="wordInput"
-       onInput={handleKeyPress}></input>
+      <Table
+       submitData={session.getSubmitData()}
+       leftCount={session.getLeftCount()}/>
+      <Input
+       onSubmit={submitAnswer}/>
+      <button
+       onClick={() => {sessionChange(new Session())}}>
+        재시작</button>
     </div>
   );
 }

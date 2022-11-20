@@ -1,14 +1,19 @@
 import './App.css';
 import Grid from './Grid';
 
-function Row() {
+interface RowProps {
+  word: string
+  color: string
+}
+
+function Row({word, color}: RowProps) {
   return (
     <tr>
-        <Grid/>
-        <Grid/>
-        <Grid/>
-        <Grid/>
-        <Grid/>
+        {word.split('').map(letter => (
+          <Grid 
+           color={color}
+           letter={letter}/>
+        ))}
     </tr>
   );
 }

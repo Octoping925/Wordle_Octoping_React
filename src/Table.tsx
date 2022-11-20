@@ -1,15 +1,26 @@
 import './App.css';
+import { Constants } from './Config';
 import Row from './Row';
 
-function Table() {
+interface TableProps {
+  submitData: Array<string>,
+  leftCount: number
+}
+
+function Table({submitData, leftCount}: TableProps) {
+
   return (
     <table>
-      <Row/>
-      <Row/>
-      <Row/>
-      <Row/>
-      <Row/>
-      <Row/>
+      {submitData.map(data => (
+        <Row
+         color='gray'
+         word={data}/>
+      ))}
+      {new Array(leftCount).fill(' '.repeat(5), 0, leftCount).map(data => (
+        <Row
+         color={Constants.WHITE}
+         word={data}/>
+      ))}
     </table>
   );
 }
