@@ -3,15 +3,15 @@ import Grid from './Grid';
 
 interface RowProps {
   word: string
-  color: string
+  color: Array<string>
 }
 
 function Row({word, color}: RowProps) {
   return (
     <tr>
-        {word.split('').map(letter => (
+        {word.split('').map((letter, idx) => (
           <Grid 
-           color={color}
+           color={color[idx]}
            letter={letter}/>
         ))}
     </tr>

@@ -1,10 +1,5 @@
 import { Answer } from "./Answer";
 import { Constants } from "./Config";
-
-interface SubmitData {
-  word: string,
-  color: Array<string>
-}
   
 export class Session {
   answer: Answer;
@@ -19,10 +14,14 @@ export class Session {
     this.leftCount = Constants.TRY_COUNT;
   }
 
-  submitAnswer = (word: string): void => {
-    this.submitData = [...this.submitData, word];
-    this.submitColorData = [...this.submitColorData, this.answer.compare(word)];
+  submitAnswer = (word: string): boolean => {
+    this.submitData.push(word);
+
+    const compareData = this.answer.compare(word);
+    this.submitColorData.push(compareData);
     this.leftCount--;
+
+    return compareData.every(color => color === Constants.GREEN);
   }
 
   getSubmitData = (): Array<string> => this.submitData;

@@ -13,6 +13,7 @@ function Input({onSubmit}: InputProp) {
     
         if(e.key === 'Enter') {
             onSubmit(wordInputValue);
+            wordInputElement.value = '';
         }
         else {
           wordInputElement.value = wordInputValue.replace(/[^A-Za-z]/ig, '')
