@@ -1,6 +1,7 @@
 import './App.css';
 import { Constants } from './Config';
 import Row from './Row';
+import { Util } from './Util';
 
 interface TableProps {
   submitData: Array<string>,
@@ -17,9 +18,9 @@ function Table({submitData, submitColorData, leftCount}: TableProps) {
          color={submitColorData[idx]}
          word={data}/>
       ))}
-      {new Array(leftCount).fill(' '.repeat(Constants.WORD_LEN), 0, leftCount).map(data => (
+      {Util.makeArray(leftCount, ' '.repeat(Constants.WORD_LEN)).map(data => (
         <Row
-         color={new Array(Constants.WORD_LEN).fill(Constants.WHITE, 0, Constants.WORD_LEN)}
+         color={Util.makeArray(Constants.WORD_LEN, Constants.WHITE)}
          word={data}/>
       ))}
     </table>
