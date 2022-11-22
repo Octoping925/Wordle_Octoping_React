@@ -1,13 +1,15 @@
 import { Constants } from "./Config";
+import { wordDict } from "./Dictionary";
 
 export class Answer {
   answer: string
 
   constructor() {
-    this.answer = "KOREA";
+    const randomIdx = Math.floor(Math.random() * wordDict.length);
+    this.answer = wordDict[randomIdx];
   }
 
-  compare(word: string): Array<string> {
+  compare = (word: string): Array<string> => {
     return Array.from(word).map((letter, idx) => {
       switch(true) {
         case this.answer.charAt(idx) === letter:
@@ -19,4 +21,6 @@ export class Answer {
       }
     });
   }
+
+  equals = (word: string): boolean => this.answer === word;
 }
