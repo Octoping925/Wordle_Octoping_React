@@ -16,15 +16,13 @@ export class Session {
 
   submitAnswer = (word: string): boolean => {
     this.submitData.push(word);
-
-    const compareData = this.answer.compare(word);
-    this.submitColorData.push(compareData);
+    this.submitColorData.push(this.answer.compare(word));
     this.leftCount--;
 
-    return compareData.every(color => color === Constants.GREEN);
+    return this.answer.equals(word);
   }
 
-  getSubmitData = (): Array<string> => this.submitData;
-  getSubmitColorData = (): Array<Array<string>> => this.submitColorData;
-  getLeftCount = (): number => this.leftCount;
+  getSubmitData = () => this.submitData;
+  getSubmitColorData = () => this.submitColorData;
+  getLeftCount = () => this.leftCount;
 }
