@@ -7,8 +7,8 @@ export class Session {
   submitColorData: Array<Array<string>>
   leftCount: number;
 
-  constructor() {
-    this.answer = new Answer();
+  constructor(answerIdx: number) {
+    this.answer = new Answer(answerIdx);
     this.submitData = [];
     this.submitColorData = [];
     this.leftCount = Constants.TRY_COUNT;
