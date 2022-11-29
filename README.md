@@ -17,9 +17,9 @@
 
 ## 기술 스택
 
-|   React    | Typescript |
-| :--------: | :---------:|
-|  ![react]  |    ![ts]   |
+|   React    | Typescript |   Jest  |
+| :--------: | :---------:| :------:|
+|  ![react]  |    ![ts]   | ![jest] |
 
 <br>
 
@@ -44,3 +44,4 @@ CSS에 능통하지는 않아, 글자 입력할 때 애니메이션을 넣는 �
 <!-- Stack Icon Refernces -->
 [react]: https://github.com/Octoping925/readme-template/blob/main/images/stack/react.svg
 [ts]: https://github.com/Octoping925/readme-template/blob/main/images/stack/typescript.svg
+[jest]: https://github.com/Octoping925/readme-template/blob/main/images/stack/jest.svg
