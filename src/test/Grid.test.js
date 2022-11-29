@@ -8,7 +8,7 @@ test('render Grid', () => {
     const letter = 'A';
 
     // when
-    const { container } = render(<Grid color={color} letter={letter} />);
+    const { container } = render(<table><tbody><tr><Grid color={color} letter={letter} /></tr></tbody></table>);
 
     // then
     const gridText = screen.getByText(letter);
