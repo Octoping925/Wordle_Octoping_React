@@ -16,7 +16,7 @@ export const Validator = {
   },
 
   isValidWord: (word: string): ErrorMessage => {
-    if(Validator.isLengthValid(word)) {
+    if(!Validator.isLengthValid(word)) {
       return {
         isValid: false,
         errorMsg: `단어의 길이는 ${Constants.WORD_LEN}글자여야 합니다`
