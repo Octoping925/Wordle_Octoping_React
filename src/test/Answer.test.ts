@@ -14,8 +14,8 @@ test('Answer의 equals 메소드는 전달 받은 인자가 answer 값과 같은
     const result2 = answer.equals("CANT_EXIST");
 
     // then
-    expect(result).toEqual(true);
-    expect(result2).toEqual(false);
+    expect(result).toBeTruthy();
+    expect(result2).toBeFalsy();
 });
 
 test('Answer의 compare 함수는 전달받은 인자와 answer 값의 비교 결과를 반환한다', () => {

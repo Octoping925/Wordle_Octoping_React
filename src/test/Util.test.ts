@@ -1,3 +1,4 @@
+import { wordDict } from "../Dictionary";
 import { Util } from "../Util";
 
 test('makeArray는 특정 요소가 들어간 특정 길이의 배열을 만든다', () => {
@@ -26,3 +27,8 @@ test('makeRandomNo는 from 이상 to 이하의 숫자를 반환한다', () => {
     expect(randomNo).toBeLessThanOrEqual(to);
 });
 
+test('pickRandomAnswer는 wordDict 안의 랜덤한 단어를 반환한다', () => {
+    const randomAnswer = Util.pickRandomAnswer();
+    
+    expect(wordDict).toContain(randomAnswer);
+})
