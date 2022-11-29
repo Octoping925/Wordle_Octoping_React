@@ -7,15 +7,23 @@ interface ErrorMessage {
 }
 
 export const Validator = {
+  isLengthValid: (word: string) => {
+    return word.length === Constants.WORD_LEN;
+  },
+
+  isInDictionary: (word: string) => {
+    return wordDict.includes(word)
+  },
+
   isValidWord: (word: string): ErrorMessage => {
-    if(word.length !== Constants.WORD_LEN) {
+    if(Validator.isLengthValid(word)) {
       return {
         isValid: false,
         errorMsg: `단어의 길이는 ${Constants.WORD_LEN}글자여야 합니다`
       };
     }
       
-    if(!wordDict.includes(word)) {
+    if(!Validator.isInDictionary(word)) {
       return {
         isValid: false,
         errorMsg: '입력한 단어는 사전에 존재하는 단어여야 합니다'
@@ -26,5 +34,5 @@ export const Validator = {
       isValid: true,
       errorMsg: ''
     };
-  }
+  },
 }

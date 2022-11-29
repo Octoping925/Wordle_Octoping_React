@@ -9,7 +9,7 @@ import { wordDict } from './Dictionary';
 import { Validator } from './Validator';
 
 function App() {
-  const [session, sessionChange] = useState(new Session(Util.makeRandomNo(0, wordDict.length)));
+  const [session, sessionChange] = useState(new Session(Util.pickRandomAnswer()));
 
   const submitAnswer = (word : string) => {
     const isValid = Validator.isValidWord(word);
@@ -36,7 +36,7 @@ function App() {
       <Input
        onSubmit={submitAnswer}/>
       <button
-       onClick={() => sessionChange(new Session(Util.makeRandomNo(0, wordDict.length)))}>
+       onClick={() => sessionChange(new Session(Util.pickRandomAnswer()))}>
         재시작</button>
     </div>
   );

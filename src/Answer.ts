@@ -4,8 +4,8 @@ import { wordDict } from "./Dictionary";
 export class Answer {
   answer: string
 
-  constructor(idx: number) {
-    this.answer = wordDict[idx];
+  constructor(answer: string) {
+    this.answer = answer;
   }
 
   compare = (word: string): Array<string> => {
