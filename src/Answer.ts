@@ -1,5 +1,4 @@
 import { Constants } from "./Config";
-import { wordDict } from "./Dictionary";
 
 export class Answer {
   answer: string

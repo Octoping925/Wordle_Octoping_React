@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import Table from './Table';
 import Input from './Input';
 import { Util } from './Util';
-import { Constants } from './Config';
 import { Session } from './Session';
-import { wordDict } from './Dictionary';
 import { Validator } from './Validator';
+import Modal from './Modal';
 
 function App() {
   const [session, sessionChange] = useState(new Session(Util.pickRandomAnswer()));
@@ -26,6 +25,8 @@ function App() {
     }
   }
 
+  const restartSession = () => sessionChange(new Session(Util.pickRandomAnswer()));
+
   return (
     <div className="App">
       <h1>Wordle</h1>
@@ -36,8 +37,15 @@ function App() {
       <Input
        onSubmit={submitAnswer}/>
       <button
-       onClick={() => sessionChange(new Session(Util.pickRandomAnswer()))}>
+       onClick={restartSession}>
         재시작</button>
+      {session.isWin() !== 'PLAYING' &&
+      <Modal
+       result={session.isWin()}
+       answer={session.getAnswer()}
+       tryCount={session.getSubmitData().length}
+       submitColorData={session.getSubmitColorData()}
+       restartOnClick={restartSession} />}
     </div>
   );
 }

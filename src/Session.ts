@@ -25,4 +25,10 @@ export class Session {
   getSubmitData = () => this.submitData;
   getSubmitColorData = () => this.submitColorData;
   getLeftCount = () => this.leftCount;
+  getAnswer = () => this.answer.answer;
+  isWin = () => {
+    if(this.answer.equals(this.submitData.at(-1) as string)) return 'SUCCESS';
+    if(this.leftCount === 0) return 'FAIL';
+    return 'PLAYING';
+  };
 }
