@@ -15,10 +15,10 @@ test('값이 들어있는 Row 렌더링', () => {
     ];
 
     // when
-    const { container } = render(<table><tbody><Row word={word} color={colorArr} /></tbody></table>);
+    const view = render(<table><tbody><Row word={word} color={colorArr} /></tbody></table>);
 
     // then
-    const grids = Array.from(container.firstChild.firstChild.children);
+    const grids = Array.from(view.container.querySelectorAll('td'));
 
     expect(grids.length).toEqual(word.length);
     expect(grids.every((grid, idx) => grid.innerHTML === word[idx])).toBeTruthy();
@@ -36,10 +36,10 @@ test('값이 비어있는 Row 렌더링', () => {
     ];
 
     // when
-    const { container } = render(<table><tbody><Row word={word} color={colorArr} /></tbody></table>);
+    const view = render(<table><tbody><Row word={word} color={colorArr} /></tbody></table>);
 
     // then
-    const grids = Array.from(container.firstChild.firstChild.children);
+    const grids = Array.from(view.container.querySelectorAll('td'));
 
     expect(grids.length).toEqual(word.length);
     expect(grids.every((grid, idx) => grid.innerHTML === word[idx])).toBeTruthy();
