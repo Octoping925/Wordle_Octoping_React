@@ -13,16 +13,18 @@ function Table({submitData, submitColorData, leftCount}: TableProps) {
 
   return (
     <table>
-      {submitData.map((data, idx) => (
-        <Row
-         color={submitColorData[idx]}
-         word={data}/>
-      ))}
-      {Util.makeArray(leftCount, ' '.repeat(Constants.WORD_LEN)).map(data => (
-        <Row
-         color={Util.makeArray(Constants.WORD_LEN, Constants.WHITE)}
-         word={data}/>
-      ))}
+      <tbody>
+        {submitData.map((data, idx) => (
+          <Row
+          color={submitColorData[idx]}
+          word={data}/>
+        ))}
+        {Util.makeArray(leftCount, ' '.repeat(Constants.WORD_LEN)).map(data => (
+          <Row
+          color={Util.makeArray(Constants.WORD_LEN, Constants.WHITE)}
+          word={data}/>
+        ))}
+      </tbody>
     </table>
   );
 }

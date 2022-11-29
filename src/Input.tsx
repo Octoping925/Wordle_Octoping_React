@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
 
 interface InputProp {
@@ -24,8 +23,9 @@ function Input({onSubmit}: InputProp) {
 
     return (
         <input
-        id="wordInput"
-        onKeyUp={handleKeyPress}></input>
+         id="wordInput"
+         placeholder="단어를 입력해주세요"
+         onKeyUp={handleKeyPress} />
     );
 }
 

@@ -8,9 +8,9 @@ interface RowProps {
 
 function Row({word, color}: RowProps) {
   return (
-    <tr>
+    <tr id={word}>
         {word.split('').map((letter, idx) => (
-          <Grid 
+          <Grid
            color={color[idx]}
            letter={letter}/>
         ))}

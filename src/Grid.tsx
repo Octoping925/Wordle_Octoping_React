@@ -7,7 +7,9 @@ interface GridProps {
 
 function Grid({color, letter}: GridProps) {
   return (
-    <td style = {{
+    <td
+     id={letter}
+     style = {{
       backgroundColor: color
     }}>
       {letter}
